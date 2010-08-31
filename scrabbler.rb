@@ -1,4 +1,6 @@
 require 'yaml'
+require 'digest/sha1'
+require 'pp'
 
 class Scrabbler
 
@@ -11,8 +13,9 @@ class Scrabbler
     result = {}
     while !@people.empty? do
       actual = choose_random!(@people)
-      result[actual] = choose_random!(@entries, actual)
+      result[Digest::SHA1.hexdigest(Time.now.to_s + "KOOMBEA" + rand.to_s)] = {actual => choose_random!(@entries, actual)}
     end
+    pp result.map {|k,v| {k => v.to_a.flatten[0] } }
     r_string = YAML.dump(result).unpack("H*")
     File.open("result.txt", "w") { |f| f.puts(r_string) }
   end
