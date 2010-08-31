@@ -22,8 +22,8 @@ class Scrabbler
     from.shift
   end
 
-  def decrypt(something)
-    [ something ].pack("H*")
+  def self.decrypt(something)
+    YAML.load([ something ].pack("H*"))
   end
 end
 
