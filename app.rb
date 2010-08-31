@@ -1,6 +1,6 @@
 require 'rubygems'
-require 'sinatra'
 require 'scrabbler'
+require 'sinatra'
 
 get "/my/:name" do
   encrypted = File.read("result.txt").chomp
