@@ -1,23 +1,32 @@
 require 'rubygems'
-require 'tmail'
-require 'net/smtp'
-require 'smtp_tls'
+require 'pony'
 require 'yaml'
+require 'ostruct'
 
 class Mailer
-  REQUIRED_OPTS = %w(msg from to)
-  HOST = "smtp.gmail.com"
-  PORT = 587
-  DOMAIN = "koombea.com"
+  Config = OpenStruct.new(
+    :smtp_address => 'smtp.gmail.com',
+    :smtp_port => '587',
+  )
+
 
   def initialize(username, password)
     @username, @password = username, password
-    @smtp = Net::SMTP.new(HOST, PORT)
-    @smtp.start(DOMAIN, @username, @password, 'plain')
   end
 
-  def send_message(*args)
-    @smtp.send_message(*args)
+  def send_message(recipient, subject, from, body)
+    Pony.mail(:from => from,
+              :to => recipient,
+              :subject => subject,
+              :via => :smtp, :via_options => {
+      :address              =>  Config.smtp_address,
+      :port                 =>  Config.smtp_port,
+      :enable_starttls_auto => true,
+      :user_name            =>  @username,
+      :password             =>  @password,
+      :authentication       => :plain,
+      :domain               => "koombea.com"
+    }, :body => body)
   end
 
 end
@@ -51,14 +60,14 @@ Jose
   puts "Password"
   password = gets
   mailer = Mailer.new(username, password)
-  mail = TMail::Mail.new
-  mail.from = "jose.gomez@koombea.com"
-  mail.subject = "[Koombea Team] Amigo Dulce"
+  from = "jose.gomez@koombea.com"
+  subject = "[Koombea Team] Amigo Dulce"
   mails = YAML.load_file("mails.yml")
   mails.each do |url, email|
-    mail.to = email
-    mail.body = message_body(url)
-    mailer.send_message(mail.to_s, mail.from, mail.to)
+    print "Enviando correo a #{email}..."
+    body = message_body(url)
+    mailer.send_message(email, subject, from, body)
+    puts "ok!"
   end
 
 end
