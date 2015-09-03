@@ -1,2 +1,9 @@
-require 'app'
+require 'rubygems'
+require 'bundler'
+
+Bundler.require(:default)
+
+require './app'
+require './scrabbler'
+
 run Sinatra::Application

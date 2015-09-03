@@ -1,7 +1,3 @@
-require 'rubygems'
-require './scrabbler'
-require 'sinatra'
-
 get "/:token/:name" do
   encrypted = File.read("result.txt").chomp
   data = Scrabbler.decrypt(encrypted)
