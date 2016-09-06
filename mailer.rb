@@ -36,20 +36,18 @@ if __FILE__ == $0
     msg = <<-HERE
 Saludos!
 
-Se realizo el sorteo aleatorio del Amigo Dulce, y para saber quien te toco,
+Se realizo el sorteo aleatorio del Amigo Secreto, y para saber quien te toco,
 visita la siguiente url:
 
 #{url}
 
-Recuerda: La cuota del regalo son $20.000
-** Solamente Dulces/Postres/Cerveza/InserteSuConsumibleAqui **
+Para conocer las preferencias de tu Amigo Secreto puedes ingresar a la
+siguiente url. Recuerda que la cuota es de $40.000.
 
-Si eres alergico o tienes preferencias (discriminaciones) por algun dulce
-en particular, escribe un PostIt con tu nombre y el dulce y pegalo en un
-lugar visible. O comunicalo publicamente.
+https://docs.google.com/a/koombea.com/spreadsheets/d/1KlM0r7QcbHDxQEsmQunq31LXZ5PYdsHIff7RdRIjENQ/edit?usp=sharing
 
 PD: El codigo de AmigoDulceKoombea v0.2 lo puedes encontrar aqui:
-    http://github.com/jfgomez86/amigodulce
+   http://github.com/jfgomez86/amigodulce
 --
 Jose
     HERE

@@ -33,7 +33,7 @@ class Scrabbler
 
   def generate_url(name, token)
     parsed_name = name.downcase.split(/\s/).join("_")
-    "http://amigodulcekoombea.heroku.com/#{token}/#{parsed_name}"
+    "http://amigosecretokoombea.heroku.com/#{token}/#{parsed_name}"
   end
 
   def self.decrypt(something)
