@@ -14,7 +14,8 @@ Como Jugar
 
 3. Montar aplicacion en heroku
 
-4. Correr `ruby mailer.rb`
+4. Correr `ruby mailer.rb` (Habilitar Less Secure Apps in Google
+   Accounts: https://www.google.com/settings/security/lesssecureapps)
 
 
 Ejemplo de people.yml:
