@@ -34,22 +34,24 @@ end
 if __FILE__ == $0
   def message_body(url)
     msg = <<-HERE
-Saludos!
+Hola!
 
-Se realizo el sorteo aleatorio del Amigo Secreto, y para saber quien te toco,
-visita la siguiente url:
+Para saber quien es tu amigo secreto, visita el siguiente link:
 
 #{url}
 
 Para conocer las preferencias de tu Amigo Secreto puedes ingresar a la
-siguiente url. Recuerda que la cuota es de $40.000.
+siguiente url. El valor sugerido es $50.000.
 
-https://docs.google.com/a/koombea.com/spreadsheets/d/1KlM0r7QcbHDxQEsmQunq31LXZ5PYdsHIff7RdRIjENQ/edit?usp=sharing
+https://docs.google.com/a/koombea.com/spreadsheets/d/17RAjECzHaLzw4w4bhrjiV1cqa3fVI5Ym-7ObJJ8rzrk/edit?usp=sharing
+
+Puedes llenar el formulario aqui: https://goo.gl/forms/lAxt3YAQ60Q5D3GJ2
 
 PD: El codigo de AmigoDulceKoombea v0.2 lo puedes encontrar aqui:
    http://github.com/jfgomez86/amigodulce
+
 --
-Jose
+Totally not a bot ("o_o)
     HERE
   end
 
