@@ -41,11 +41,11 @@ Para saber quien es tu amigo secreto, visita el siguiente link:
 #{url}
 
 Para conocer las preferencias de tu Amigo Secreto puedes ingresar a la
-siguiente url. El valor sugerido es $50.000.
+siguiente url. El valor sugerido es $30.000.
 
-https://docs.google.com/a/koombea.com/spreadsheets/d/17RAjECzHaLzw4w4bhrjiV1cqa3fVI5Ym-7ObJJ8rzrk/edit?usp=sharing
+https://docs.google.com/spreadsheets/d/1y6v5srwpGP-pu6_hDzpzsLsFg7Cq058Z0P03h6LD25M/edit?usp=sharing
 
-Puedes llenar el formulario aqui: https://goo.gl/forms/lAxt3YAQ60Q5D3GJ2
+Puedes llenar el formulario aqui: https://docs.google.com/forms/d/e/1FAIpQLSeSfX1097qVt5w8uqojIpM7n3MSIqK77HIHEFO7ER4N_q8E-g/viewform?usp=sf_link
 
 PD: El codigo de AmigoDulceKoombea v0.2 lo puedes encontrar aqui:
    http://github.com/jfgomez86/amigodulce
