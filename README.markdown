@@ -9,12 +9,12 @@ Como Jugar
 
   Esto generara dos archivos:
 
-             mails.yml # Contiene un array de hashes con los mails a enviar
-             result.txt # Contiene los resultados del juego
+             mails.yml # Contiene un array de hashes con los mails a enviar (No se versiona)
+             result.txt # Contiene los resultados del juego (Se debe versionar)
 
-3. Montar aplicacion en heroku
+3. Modificar el cuerpo del correo en `mailer.rb` y subir los cambios
 
-4. Modificar el cuerpo del correo en `mailer.rb`
+4. Montar aplicacion en heroku, incluyendo el nuevo result.txt
 
 5. Correr `ruby mailer.rb` usando application specific password
    (https://support.google.com/accounts/answer/185833?hl=en)
